@@ -3,7 +3,8 @@ pipeline {
     stages {
         stage('Cloner le code') {
             steps {
-                git 'https://github.com/TON_REPO/TON_PROJET.git'
+                git credentialsId: 'github-jenkins', url: 'https://github.com/tessnimet/jenkins-pipeline.git', branch: 'main'
+            
             }
         }
         stage('Compilation') {
